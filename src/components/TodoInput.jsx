@@ -5,11 +5,10 @@ import { useTodoStore } from '../store/Provider';
 const TodoInput = () => {
   const [name, setName] = useState('');
   const todoStore = useTodoStore();
-  
+
   const handleSubmit = event => {
     event.preventDefault();
     todoStore.addTodo(name);
-    console.log(todoStore.todoList);
   };
   
   return useObserver(() => (
