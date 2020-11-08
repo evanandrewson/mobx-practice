@@ -5,9 +5,6 @@ import { useTodoStore } from '../store/Provider';
 const TodoList = () => {
   const todoStore = useTodoStore();
 
-  console.log('rendered');
-  console.log(todoStore.todoList);
-
   return useObserver(() => (
     <ul>
       {todoStore.todoList.map(todo => {

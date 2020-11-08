@@ -7,7 +7,7 @@ export const createTodoStore = () => {
       this.todoList.push({ id: nanoid(), name });
     },
     removeTodo(id) {
-      this.todoList.filter(todo => todo.id !== id);
+      this.todoList = this.todoList.filter(todo => todo.id !== id);
     }
   });
 };
